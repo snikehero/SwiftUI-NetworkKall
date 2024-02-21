@@ -11,6 +11,8 @@
 		5FF51D142B85A2E6002277F7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF51D132B85A2E6002277F7 /* ContentView.swift */; };
 		5FF51D162B85A2E8002277F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF51D152B85A2E8002277F7 /* Assets.xcassets */; };
 		5FF51D1A2B85A2E8002277F7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5FF51D192B85A2E8002277F7 /* Preview Assets.xcassets */; };
+		5FF51D222B85A39F002277F7 /* GitHubModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF51D212B85A39F002277F7 /* GitHubModel.swift */; };
+		5FF51D252B85A4DC002277F7 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5FF51D242B85A4DC002277F7 /* Network.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +22,8 @@
 		5FF51D152B85A2E8002277F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5FF51D172B85A2E8002277F7 /* SwiftUINetworkCall.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SwiftUINetworkCall.entitlements; sourceTree = "<group>"; };
 		5FF51D192B85A2E8002277F7 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		5FF51D212B85A39F002277F7 /* GitHubModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubModel.swift; sourceTree = "<group>"; };
+		5FF51D242B85A4DC002277F7 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +56,8 @@
 		5FF51D102B85A2E6002277F7 /* SwiftUINetworkCall */ = {
 			isa = PBXGroup;
 			children = (
+				5FF51D232B85A4AD002277F7 /* Network */,
+				5FF51D202B85A392002277F7 /* Models */,
 				5FF51D112B85A2E6002277F7 /* SwiftUINetworkCallApp.swift */,
 				5FF51D132B85A2E6002277F7 /* ContentView.swift */,
 				5FF51D152B85A2E8002277F7 /* Assets.xcassets */,
@@ -67,6 +73,22 @@
 				5FF51D192B85A2E8002277F7 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5FF51D202B85A392002277F7 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5FF51D212B85A39F002277F7 /* GitHubModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5FF51D232B85A4AD002277F7 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				5FF51D242B85A4DC002277F7 /* Network.swift */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +163,8 @@
 			files = (
 				5FF51D142B85A2E6002277F7 /* ContentView.swift in Sources */,
 				5FF51D122B85A2E6002277F7 /* SwiftUINetworkCallApp.swift in Sources */,
+				5FF51D252B85A4DC002277F7 /* Network.swift in Sources */,
+				5FF51D222B85A39F002277F7 /* GitHubModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
