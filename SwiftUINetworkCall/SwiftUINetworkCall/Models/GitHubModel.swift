@@ -9,6 +9,6 @@ import Foundation
 
 struct GitHuberUser: Codable {
     let login: String
-    let avatarUrl: String // Doesnt match JSON due to json using snakecase and SwiftUI code is tipically written in camel case
+    let avatar_url: String // Doesnt match JSON due to json using snakecase and SwiftUI code is tipically written in camel case
     let bio: String
 }

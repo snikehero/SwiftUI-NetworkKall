@@ -8,21 +8,43 @@
 import SwiftUI
 //Step 1: Create Dummy UI
 struct ContentView: View {
+    @State private var user: GitHuberUser?
+    var network: NetworkCall = NetworkCall()
     var body: some View {
         VStack(spacing: 20) {
-            Circle()
-                .foregroundColor(.secondary)
-                .frame(width: 120, height: 120)
+            AsyncImage(url: URL(string: user?.avatar_url ?? "")) { image in
+                image
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(Circle())
+            } placeholder: {
+                Circle()
+                    .foregroundColor(.secondary)
+            }                   
+            .frame(width: 120, height: 120)
             
-            Text("Username")
+            Text(user?.login ?? "Login PlaceHolder")
                 .bold()
                 .font(.title3)
             
-            Text("This is where the github bio will go. Lets make it long so it spans two lines.")
+            Text(user?.bio ?? "Bio PlaceHolder")
                 .padding()
             Spacer()
         }
         .padding()
+        .task {
+            do {
+                user = try await network.getUser()
+            } catch GHError.invalidURL {
+                print("Invalid URL")
+            } catch GHError.invalidResponse {
+                print("Invalid response")
+            } catch GHError.invalidData {
+                print("Invalid Data")
+            } catch {
+                print("Unexpected error")
+            }
+        }
     }
 }
 
